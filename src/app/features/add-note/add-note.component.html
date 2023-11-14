@@ -1,0 +1,33 @@
+<div class="container">
+  <form class="form" [formGroup]="form">
+    <h1>Создание заметки</h1>
+    <mat-form-field class="form-field">
+      <mat-label>Введите название заметки</mat-label>
+      <input
+        class="input"
+        type="text"
+        matInput
+        formControlName="noteTitle"
+        placeholder="Введите название заметки"
+      />
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <mat-label>Введите текст заметки</mat-label>
+      <input
+        class="input"
+        type="text"
+        matInput
+        formControlName="noteText"
+        placeholder="Введите текст заметки"
+      />
+    </mat-form-field>
+    <div class="button-container">
+      <button class="btn" mat-icon-button color="primary" [disabled]="form.invalid" (click)="onSubmit()">
+        <mat-icon>done</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" >
+        <mat-icon>clear</mat-icon>
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+.form{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-field {
+    width: 100%;
+    margin-bottom: 5px;
+}

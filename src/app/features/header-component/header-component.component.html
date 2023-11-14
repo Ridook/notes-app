@@ -1,1 +1,15 @@
-<p>header-component works!</p>
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1 class="title" [routerLink]="''">Мои заметки</h1>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="sidenav" #sidenav opened="true" mode="side">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+    <div style="height: 88vh; width: 300px"></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

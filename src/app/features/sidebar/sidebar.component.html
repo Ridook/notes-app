@@ -1,0 +1,11 @@
+<div class="container">
+  <button class="add-note-btn" mat-flat-button color="primary" (click)="openDialog()">Добавить заметку</button>
+
+  <div class="notes-titles">
+    <ng-container *ngFor="let note of notes">
+      <h1 class="note-title" [routerLink]="['/note', note.id]">
+        {{ note.title }}
+      </h1>
+    </ng-container>
+  </div>
+</div>

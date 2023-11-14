@@ -1,0 +1,14 @@
+.header {
+  border-bottom: 2px solid black;
+  background-color: antiquewhite;
+}
+
+.example-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav {
+  width: 300px;
+}
