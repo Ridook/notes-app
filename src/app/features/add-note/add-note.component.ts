@@ -1,13 +1,17 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { NoteService } from 'src/app/services/note.service';
-import { DialogRef } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-add-note',
@@ -19,24 +23,24 @@ import { DialogRef } from '@angular/cdk/dialog';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
   ],
   templateUrl: './add-note.component.html',
   styleUrls: ['./add-note.component.css'],
 })
 export class AddNoteComponent {
-  public dialogRef = inject(MatDialogRef<AddNoteComponent>)
+  public dialogRef = inject(MatDialogRef<AddNoteComponent>);
   public form = new FormGroup({
     noteTitle: new FormControl('', [Validators.required]),
-    noteText: new FormControl('', [Validators.required])
-  })
+    noteText: new FormControl('', [Validators.required]),
+  });
 
   onSubmit() {
-    console.log(this.form.value)
-    this.dialogRef.close(this.form.value)
+    console.log(this.form.value);
+    this.dialogRef.close(this.form.value);
   }
 
   close() {
-    this.dialogRef.close(null)
+    this.dialogRef.close(null);
   }
 }

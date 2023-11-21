@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { INote, NoteService } from 'src/app/services/note.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -36,7 +36,7 @@ export class SidebarComponent {
           text: result.noteText,
           id: this.notes.length + 1,
         };
-        this.noteService.addNote(note)
+        this.noteService.addNote(note);
       }
     });
   }

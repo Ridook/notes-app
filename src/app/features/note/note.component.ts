@@ -1,10 +1,9 @@
 import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, ParamMap, RouterModule } from '@angular/router';
-import { map, tap } from 'rxjs';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { map } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { INote, NoteService } from 'src/app/services/note.service';
-import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-note',
