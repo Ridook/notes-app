@@ -19,7 +19,7 @@ import { AddNoteComponent } from '../add-note/add-note.component';
   ],
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  providers: [NoteService],
+  providers: [],
 })
 export class SidebarComponent {
   private noteService = inject(NoteService);
@@ -36,7 +36,7 @@ export class SidebarComponent {
           text: result.noteText,
           id: this.notes.length + 1,
         };
-        this.notes.push(note);
+        this.noteService.addNote(note)
       }
     });
   }

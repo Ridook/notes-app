@@ -30,14 +30,13 @@ export class AddNoteComponent {
     noteTitle: new FormControl('', [Validators.required]),
     noteText: new FormControl('', [Validators.required])
   })
-  public flag = false;
 
   onSubmit() {
     console.log(this.form.value)
     this.dialogRef.close(this.form.value)
   }
 
-  // close() {
-  //   this.dialogRef.close(null)
-  // }
+  close() {
+    this.dialogRef.close(null)
+  }
 }

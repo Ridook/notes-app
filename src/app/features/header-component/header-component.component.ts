@@ -23,5 +23,4 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./header-component.component.css'],
 })
 export class HeaderComponent {
-  @Input() sidenav: any;
 }
